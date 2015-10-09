@@ -77,7 +77,7 @@ class RecaptchaType extends AbstractType
 
         if (!$this->ajax) {
             $view->vars = array_replace($view->vars, array(
-                'url_challenge' => sprintf('%s?hl=%s', self::RECAPTCHA_API_SERVER, $options['langauge']),
+                'url_challenge' => sprintf('%s?hl=%s', self::RECAPTCHA_API_SERVER, $options['language']),
                 'public_key'    => $this->publicKey,
             ));
         } else {
@@ -95,7 +95,7 @@ class RecaptchaType extends AbstractType
     {
         $resolver->setDefaults(array(
             'compound'      => false,
-            'langauge'      => $this->language,
+            'language'      => $this->language,
             'public_key'    => null,
             'url_challenge' => null,
             'url_noscript'  => null,
